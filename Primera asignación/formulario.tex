@@ -1,0 +1,75 @@
+\documentclass[11pt, letterpaper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb, amsfonts}
+
+\title{Formulario Arquitectura del computador}
+\author{Guillermo Cedeño}
+\date{\today}
+
+\begin{document}
+\section{Formulario Arquitectura}\\
+
+\subsection{Prestaciones}
+
+$\displaystyle Prestaciones_x = \frac{1}{\text{Tiempo de ejecución}_x}$\\\\
+
+"X es n veces más rápida que Y", si\\
+
+
+$\displaystyle n = \frac{\text{Prestaciones}_X}{\text{Prestaciones}_Y}$
+
+\subsection{Prestaciones De la CPU}\\
+
+$\displaystyle \text{Tiempo de ejecución de CPU} = \text{Ciclos de reloj de la CPU }\times{\text{ Tiempo del
+ciclo del reloj}}$\\\\
+
+Tomando en cuenta \\
+
+$\displaystyle\frac{1}{\text{Frecuencia del reloj}} = \text{Tiempo del ciclo del reloj}$\\\\
+
+$\displaystyle \text{Tiempo de ejecución de CPU} = \frac{\text{Ciclos de reloj de la CPU }}{\text{Frecuencia de Reloj}}$\\\\
+
+
+$(CPI)\text{Ciclos de reloj de CPU} = \text{Instrucciones de un programa } \times {\text{ Media de ciclos por instrucción}}$\\\\
+Con lo cual tenemos\\
+
+$\text{Tiempo de ejecución} = \text{Numero de instrucciones } \times {\text{ CPI }}\times{\text{ Tiempo de ciclo}}$\\
+
+o bien, dado que la frecuencia es el inverso del tiempo del ciclo\\
+
+$\displaystyle\text{Tiempo de ejecución} = \frac{\text{Numero de instrucciones } \times {\text{ CPI }}}{\text{Frecuencia de reloj}}$\\
+
+También\\
+
+$\displaystyle CPI = \frac{\text{Ciclos de reloj de la CPU}}{\text{Número de instrucciones}}$\\\\
+
+$\displaystyle Tiempo = \frac{Segundos}{Programa} = \frac{Instrucciones}{Programa}\times\frac{\text{Ciclos de reloj}}{\text{Instrucción}}\times\frac{Segundos}{\text{Ciclo de reloj}}  $
+
+\subsection{Circuitos integrados}\\
+
+$\displaystyle\text{Coste por dado} = \frac{\text{Coste por oblea}}{\text{dado por oblea}\times{\text{Factor de producción}}}$\\\\
+
+$\displaystyle\text{Dados por oblea} = \frac{\text{área de la oblea}}{\text{área del dado}}$\\\\
+
+$\displaystyle\text{Factor de producción} = \frac{1}{( 1 +\text{Defectos por área}\times{\frac{\text{área del dado}}{2}})^2}$\\\\
+
+\subsection{Razones SPEC}
+
+Media geométrica\\\\
+
+$\displaystyle\sqrt[n]{\prod_{i=1}^{n}\text{Relaciones de tiempo de ejecución}_i}$\\
+
+$\displaystyle\text{ssj\_ops global por vatio} = \frac{(\sum_{i=0}^{10}ssj\_ops_i)}{(\sum_{i=0}^{10}potencia_i)}$\\
+
+\subsection{Mejoras}
+
+$\displaystyle\text{Tiempo de ejecución después de las mejoras} = \frac{\text{tiempo de ejecución por la mejora}}{\text{Cantidad de mejora}}+ \text{Tiempo de ejecución no afectado}$\\
+
+\subsection{MIPS}
+
+$\displaystyle MIPS=\frac{\text{Número de instrucciones}}{\text{tiempo de ejecución}\times 10^6}$\\\\
+
+$\displaystyle MIPS=\frac{\text{número de instrucciones}}{\frac{\text{número de instrucciones}\times CPI}{\text{frecuencia de reloj}}\times 10^6} = \frac{\text{frecuencia de reloj}}{CPI\times 10^6}$
+
+\end{document}
